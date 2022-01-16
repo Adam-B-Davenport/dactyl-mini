@@ -1,0 +1,26 @@
+if SHIELD_STORM_LEFT
+
+    config ZMK_KEYBOARD_NAME
+        default "storm"
+
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
+
+endif
+
+if SHIELD_STORM_RIGHT
+
+    config ZMK_KEYBOARD_NAME
+        default "storm r"
+
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default n
+
+endif
+
+if SHIELD_STORM_LEFT || SHIELD_STORM_RIGHT
+
+    config ZMK_SPLIT
+        default y
+
+endif

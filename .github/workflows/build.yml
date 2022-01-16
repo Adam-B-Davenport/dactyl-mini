@@ -33,29 +33,29 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (Dactyl Left)
-        run: west build -s zmk/app -b nice_nano -- -DSHIELD=dactyl_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Dactyl DTS File
+      - name: West Build (Storm Left)
+        run: west build -s zmk/app -b nice_nano -- -DSHIELD=storm_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: Storm DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano.dts.pre.tmp
-      - name: Dactyl Left Kconfig file
+      - name: Storm Left Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 dactyl_left_nice_nano.uf2
-      - name: Archive (Dactyl Left)
+        run: cp build/zephyr/zmk.uf2 storm_left_nice_nano.uf2
+      - name: Archive (Storm Left)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: dactyl_left_nice_nano.uf2
-      - name: West Build (Dactyl Right)
-        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=dactyl_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+          path: storm_left_nice_nano.uf2
+      - name: West Build (Storm Right)
+        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=storm_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
 
-      - name: Dactyl Right Kconfig file
+      - name: Storm Right Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 dactyl_right_nice_nano.uf2
-      - name: Archive (Dactyl Right)
+        run: cp build/zephyr/zmk.uf2 storm_right_nice_nano.uf2
+      - name: Archive (Storm Right)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: dactyl_right_nice_nano.uf2
+          path: storm_right_nice_nano.uf2

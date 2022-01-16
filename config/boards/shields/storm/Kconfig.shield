@@ -1,0 +1,5 @@
+config SHIELD_STORM_LEFT
+    def_bool $(shields_list_contains,storm_left)
+
+config SHIELD_STORM_RIGHT
+    def_bool $(shields_list_contains,storm_right)
