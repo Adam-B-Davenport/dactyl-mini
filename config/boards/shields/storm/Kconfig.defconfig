@@ -13,14 +13,15 @@ if SHIELD_STORM_RIGHT
     config ZMK_KEYBOARD_NAME
         default "storm r"
 
-    config ZMK_SPLIT_BLE_ROLE_CENTRAL
-        default n
-
 endif
 
 if SHIELD_STORM_LEFT || SHIELD_STORM_RIGHT
 
     config ZMK_SPLIT
+        default y
+    config CONFIG_ZMK_USB_LOGGING
+        default y
+    config ZMK_USB_LOGGING
         default y
 
 endif
