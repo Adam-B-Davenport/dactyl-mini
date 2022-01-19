@@ -20,7 +20,4 @@ if SHIELD_STORM_LEFT || SHIELD_STORM_RIGHT
     config ZMK_SPLIT
         default y
 
-    config ZMK_USB_LOGGING
-        default y
-
 endif
