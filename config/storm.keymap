@@ -35,37 +35,37 @@
 
         default_layer {
             bindings = <
-            &kp Q     &kp W    &kp E     &kp R     &kp T                    &kp Y     &kp U     &kp I     &kp O     &kp P    
-            &kp A     &kp S    &kp D     &kp F     &kp G                    &kp H     &kp J     &kp K     &kp L     &kp SEMI 
-    &ht LSHIFT Z     &kp X    &kp C     &kp V     &kp B                    &kp N     &kp M     &kp COMMA &kp DOT   &ht LSHIFT FSLH 
-                       &to NUMS  &ht LCTRL ESC   &ht LGUI BSPC                  &ht LGUI RET   &ht LCTRL SPC  &to SYMS
+&kp Q        &kp W    &kp E     &kp R     &kp T                    &kp Y     &kp U     &kp I     &kp O     &kp P    
+&kp A        &kp S    &kp D     &kp F     &kp G                    &kp H     &kp J     &kp K     &kp L     &kp SEMI 
+&ht LSHIFT Z &kp X    &kp C     &kp V     &kp B                    &kp N     &kp M     &kp COMMA &kp DOT   &ht LSHIFT FSLH 
+                      &mo NUMS  &ht LCTRL ESC   &ht LGUI TAB       &ht LGUI RET   &ht LCTRL SPC  &mo SYMS
             >;
         };
 
         num_layer {
             bindings = <
-    &kp N1     &kp N2  &kp N3  &kp N4   &kp N5                &kp N6     &kp N7     &kp N8   &kp N9      &kp N0 
-    &kp BSPC   &none   &kp DEL   &kp TAB   &none                     &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &none   
-    &kp LSHIFT &none   &kp LC(INS)   &kp LS(INS)   &none                &none    &none   &kp COMMA   &kp DOT   &kp FSLH
-             &to DEFAULT   &ht LCTRL ESC   &ht LGUI BSPC       &ht LGUI RET   &ht LCTRL SPC  &none
+&kp N1     &kp N2       &kp N3      &kp N4      &kp N5      &kp N6     &kp N7     &kp N8   &kp N9      &kp N0 
+&kp BSPC   &kp LC(BSPC) &kp DEL     &kp TAB     &none       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp COLON   
+&kp LSHIFT &none        &kp LC(INS) &kp LS(INS) &none       &none      &none   &kp COMMA   &kp DOT   &kp FSLH
+             &none &ht LCTRL ESC   &ht LGUI TAB             &ht LGUI RET   &ht LCTRL SPC  &mo OS
             >;
         };
 
         sym_layer {
             bindings = <
-    &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT             &kp CARET &kp AMPS &kp STAR  &kp LPAR    &kp RPAR    
-    &kp BSPC &none   &kp LBRC   &kp RBRC   &kp GRAVE           &kp EXCL  &kp EQUAL &kp PLUS &kp MINUS   &kp COLON  
-    &none    &none   &kp LBKT   &kp RBKT   &kp TILDE           &none    &kp C_VOL_DN   &kp C_VOL_UP   &kp UNDER   &none
-             &to DEFAULT   &ht LCTRL ESC   &ht LGUI BSPC       &ht LGUI RET   &ht LCTRL SPC  &mo OS
+&kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT              &kp CARET &kp AMPS     &kp STAR  &kp LPAR    &kp RPAR    
+&kp BSPC &none   &kp LBRC   &kp RBRC   &kp GRAVE           &kp EXCL  &kp EQUAL    &kp PLUS  &kp MINUS   &kp SQT  
+&kp LSHIFT &none   &kp LBKT   &kp RBKT   &kp TILDE         &none     &kp SQT      &kp DQT   &kp UNDER   &kp LSHIFT
+                 &mo OS     &ht LCTRL ESC &ht LGUI TAB     &ht LGUI RET   &ht LCTRL SPC  &none
             >;
         }; 
 
         os_layer {
             bindings = <
- &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)          &kp LG(N6) &kp LG(N7) &kp LG(N8) &kp LG(N9) &kp LG(N0)
-       &none   &none   &none   &none   &none                            &none   &none   &none   &none   &none  
-       &none   &none   &bt BT_CLR   &none   &kp LC(LA(DEL))                       &none   &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  
-                            &none   &none   &none                               &none   &none   &none   
+&kp LG(N1)  &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)         &kp LG(N6) &kp LG(N7)     &kp LG(N8)   &kp LG(N9)   &kp LG(N0)
+&none   &none   &none   &none   &none                           &none      &kp C_VOL_DN &kp C_VOL_UP        &none        &none  
+&none   &none   &bt BT_CLR   &none   &kp LC(LA(DEL))            &none      &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  
+                             &none   &none   &none                               &none   &none   &none   
             >;
         };
         
