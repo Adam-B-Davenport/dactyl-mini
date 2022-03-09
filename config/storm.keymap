@@ -37,7 +37,7 @@
             bindings = <
 &kp Q        &kp W    &kp E     &kp R     &kp T                    &kp Y     &kp U     &kp I     &kp O     &kp P    
 &kp A        &kp S    &kp D     &kp F     &kp G                    &kp H     &kp J     &kp K     &kp L     &kp SEMI 
-&ht LSHIFT Z &kp X    &kp C     &kp V     &kp B                    &kp N     &kp M     &kp COMMA &kp DOT   &ht LSHIFT FSLH 
+&ht LSHIFT Z &kp X    &kp C     &kp V     &kp B                    &kp N     &kp M     &kp COMMA &kp DOT   &sk LSHIFT
                       &mo NUMS  &ht LCTRL ESC   &ht LGUI TAB       &ht LGUI RET   &ht LCTRL SPC  &mo SYMS
             >;
         };
